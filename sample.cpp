@@ -13,6 +13,11 @@ int main()
   cout << "Enter a positive integer: ";
   cin >> n;
 
+  if( is_number(n) ){
+    cout << "invalid value given";
+    return 0;
+  }
+     
   for(i = 2; i <= n / 2; ++i)
   {
       if(n % i == 0)
@@ -28,4 +33,13 @@ int main()
       cout << "This is not a prime number";
 
   return 0;
+}
+
+bool is_number(string str) {
+   for (int i = 0; i < str.length(); i++)
+     
+   if (isdigit(str[i]) == false)
+      return false;
+   
+  return true;
 }
