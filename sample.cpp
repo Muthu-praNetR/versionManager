@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+  // Declare variales
   int n, i;
   bool isPrime = true;
 
