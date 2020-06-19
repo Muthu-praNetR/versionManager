@@ -12,16 +12,18 @@ int main()
   cout << "Enter a positive integer: ";
   cin >> n;
 
+  // check is an integer
   if( is_number(n) ){
     cout << "invalid value given";
     return 0;
   }
    
-  findPrime(n);
+  findPrime(n); // find is a prime number 
   
   return 0;
 }
 
+// validate the given number as integer
 bool is_number(string str) {
    for (int i = 0; i < str.length(); i++)
      
@@ -31,6 +33,8 @@ bool is_number(string str) {
   return true;
 }
 
+// To check a given number as prime number 
+// and print the result to user 
 void findPrime( int n ){
   int i;
   bool isPrime = true;
