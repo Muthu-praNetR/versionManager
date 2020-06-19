@@ -12,14 +12,29 @@ int main()
   cout << "Enter a positive integer: ";
   cin >> n;
 
+  if( is_number(n) ){
+    cout << "invalid value given";
+    return 0;
+  }
+   
   findPrime(n);
   
   return 0;
 }
 
+bool is_number(string str) {
+   for (int i = 0; i < str.length(); i++)
+     
+   if (isdigit(str[i]) == false)
+      return false;
+   
+  return true;
+}
+
 void findPrime( int n ){
   int i;
   bool isPrime = true;
+
 
   for(i = 2; i <= n / 2; ++i)
   {
