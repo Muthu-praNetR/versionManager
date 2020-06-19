@@ -7,11 +7,19 @@ using namespace std;
 int main()
 {
   // Declare variales
-  int n, i;
-  bool isPrime = true;
-
+  int n;
+  
   cout << "Enter a positive integer: ";
   cin >> n;
+
+  findPrime(n);
+  
+  return 0;
+}
+
+void findPrime( int n ){
+  int i;
+  bool isPrime = true;
 
   for(i = 2; i <= n / 2; ++i)
   {
@@ -26,6 +34,4 @@ int main()
       cout << "This is a prime number";
   else
       cout << "This is not a prime number";
-
-  return 0;
 }
